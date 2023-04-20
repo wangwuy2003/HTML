@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		body {
+			background-color: lightblue;
+		}
+
+		form{
+			height: 200px;
+		}
+
+		#div_tong{
+			width: 700px;
+			height: 350px;
+			margin: auto;
+			box-shadow: 10px 10px 5px grey;
+			background-color: rgb(55, 82, 88);
+		}
+		.title{
+			font-size: 20px;
+			font-weight: bold;
+			line-height: 30px;
+			display: flex;
+			justify-content: center;
+			color: white;
+		}
+
+		input[type="number"]{
+			width: 300px;
+			padding: 12px 20px;
+			margin-top: 30px;
+			margin-left: 200px;
+			box-sizing: border-box;
+		}
+		button[type="button"]{
+			display: flex;
+			padding: 5px;
+			width: 120px;
+			justify-content: center;
+			background-color: rgb(46,139,87);
+			border: none;
+			color: white;
+			font-size: 15px;
+			font-weight: bold;
+			float: left;
+			margin: 10px;
+
+		}
+
+		button[type="button"]:hover{
+			background-color: rgb(60,179,113);
+		}
+	</style>
+</head>
+<body>
+	<div id="div_tong">
+		<form>
+			<div class="title">Mời nhập số</div>
+			<input type="number" name="" id="input_so">
+			<br>
+			<button type="button" onclick="nhap()" id="btn-nhap">Nhập</button>
+			<button type="button" onclick="in_toan_bo()" id="btn-in">In toàn bộ</button>
+			<button type="button" onclick="in_chan_le()">chẵn lẻ</button>
+			<button type="button" onclick="so_lon_nhat()">Số lớn nhất</button>
+			<button type="button" onclick="tong_phan_tu()">Tổng phần tử</button>
+			<button type="button" onclick="so_nguyen_to()">Số nguyên tố</button>
+			<button type="button" onclick="in_mau()">Mã màu</button>
+		</form>
+		<div id="in" style="color: white; margin: 5px;"></div>
+		<div id="in_so_chan" style="color: white; margin: 5px;"></div>
+		<div id="in_so_le" style="color: white; margin: 5px;"></div>
+		<div id="so_lon_nhat" style="color: white; margin: 5px;"></div>
+		<div id="tong_phan_tu" style="color: white; margin: 5px;"></div>
+		<div id="so_nguyen_to" style="color: white; margin: 5px;"></div>
+		<div id="ma_mau" style="color: white; margin: 5px;"></div>
+	</div>
+	<script type="text/javascript">
+		let mang = [];
+		let m, c;
+		let ma_mau = '';
+		function nhap() {
+			var so = parseInt(document.getElementById('input_so').value);
+			// body...
+			mang.push(so);
+			document.getElementById('input_so').value = '';
+		}
+
+		function in_toan_bo(){
+			let chuoi = '';
+			for (let i = 0; i < mang.length; i++){
+				chuoi += mang[i] + ' ';
+			}
+			document.getElementById('in').innerHTML = `In toàn bộ: ${chuoi}`;
+		}
+
+		function in_chan_le(){
+			let array_even = [];
+			let array_odd = [];
+			for (var i = 0; i < mang.length; i++){
+				if (mang[i] % 2 == 0){
+					array_even.push(mang[i]);
+					document.getElementById('in_so_chan').innerHTML = `Các phần tử chẵn trong mảng là ${array_even}`;
+				}
+				else if(mang[i] % 2 != 0){
+					array_odd.push(mang[i])
+					document.getElementById('in_so_le').innerHTML = `Các phần tử lẻ trong mảng là ${array_odd}`;
+				}
+			}
+		}
+
+		function so_lon_nhat(){
+			let max = mang[0];
+			for (let i = 0; i < mang.length; i++){
+				if (max < mang[i]){
+					max = mang[i];
+				}
+			}
+			document.getElementById('so_lon_nhat').innerHTML = `Số lớn nhất trong mảng là ${max}`;
+		}
+
+		function tong_phan_tu() {
+			// body...
+			let sum = 0;
+			for (var i = 0; i < mang.length; i++){
+				sum += mang[i];
+				document.getElementById('tong_phan_tu').innerHTML = `Tổng các phần tử: ${sum}`;
+			}
+		}
+
+		function ktra_nguyen_to(m){
+			if (m < 2){
+				return false;
+			}
+			for (let i = 2; i < (m-1); i++){
+				if (m % i == 0){
+					return false;
+				}
+			}
+			return true;
+		}
+		function so_nguyen_to(){
+			let so_ng_to = '';
+			for (let i = 0; i < mang.length; i++){
+				if (ktra_nguyen_to(mang[i])){
+					so_ng_to += mang[i] + ' ';
+				}
+			}
+			document.getElementById('so_nguyen_to').innerHTML = `Số nguyên tố: ${so_ng_to}`;
+		}
+	</script>
+</body>
+</html>

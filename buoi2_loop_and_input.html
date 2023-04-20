@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		body {
+			background-color: lightblue;
+		}
+
+		#div_tong{
+			width: 500px;
+			height: 350px;
+			margin: auto;
+			box-shadow: 10px 10px 5px grey;
+			background-color: rgb(55, 82, 88);
+		}
+		.title{
+			font-size: 20px;
+			font-weight: bold;
+			line-height: 30px;
+			display: flex;
+			justify-content: center;
+			color: white;
+		}
+
+		input[type="number"]{
+			width: 200px;
+			padding: 12px 20px;
+			margin-top: 30px;
+			margin-left: 150px;
+			box-sizing: border-box;
+		}
+		button[type="button"]{
+			display: flex;
+			margin-left: 200px;
+			margin-top: 20px;
+			padding: 10px;
+			width: 100px;
+			justify-content: center;
+			background-color: rgb(46,139,87);
+			border: none;
+			color: white;
+			font-size: 15px;
+			font-weight: bold;
+		}
+
+		button[type="button"]:hover{
+			background-color: rgb(60,179,113);
+		}
+	</style>
+</head>
+<body>
+	<div id="div_tong">
+		<form>
+			<div class="title">Mời nhập số</div>
+			<input type="number" name="" id="input_so">
+			<br>
+			<button type="button" onclick="in_ra()" id="btn">Kiểm tra</button>
+		</form>
+		<div id="chan_le" style="color: white; margin: 5px;"></div>
+		<div id="nguyen_to" style="color: white; margin: 5px;"></div>
+		<div id="day_so" style="color: white; margin: 5px;"></div>
+		<div id="lan_nhap" style="color: white; margin: 5px;"></div>
+	</div>
+	<script type="text/javascript">
+		var input = document.getElementById('input_so');
+		input.addEventListener("keypress", function(event) {
+			if (event.key === "Enter") {
+				event.preventDefault();
+				document.getElementById("btn").click();
+			}
+		});
+
+		var dem_so_lan_nhap = 0;
+		function in_ra(){
+			let n = parseFloat(document.getElementById('input_so').value);
+			dem_so_lan_nhap++;
+			ktra_chan_le();
+			ktra_nguyen_to(n);
+			day_so(n);
+			document.getElementById('input_so').value = '';
+			document.getElementById('lan_nhap').innerHTML = `Bạn đã nhập ${dem_so_lan_nhap} lần`;
+		}
+
+		function ktra_chan_le(){
+			let so = document.getElementById('input_so').value;
+			//kiem tra chan, le, thap phan
+			let count = 0;
+			if (so % 2 == 0){
+				document.getElementById('chan_le').innerHTML = `${so} là số chẵn`;
+			} 
+			else if(so % 2 == 1){
+				document.getElementById('chan_le').innerHTML = `${so} là số lẻ`;
+			} 
+			else {
+				document.getElementById('chan_le').innerHTML = `${so} là số thập phân`;
+			}					
+		}
+
+		//kiem tra so nguyen to: 
+		function ktra_nguyen_to(n){
+			let nguyento = document.getElementById('nguyen_to');
+			let flag = true;
+			if (n < 2){
+				flag = false;
+			}
+			else {
+				for (var i = 2; i <= Math.sqrt(n); i++){
+					if (n % i == 0){
+						flag = false;
+						break;
+					}
+				}
+			}
+			if (flag == true){
+				nguyento.innerHTML = `${n} la so nguyen to`;
+			}
+			else {
+				nguyento.innerHTML = `${n} khong la so nguyen to`;
+			}
+		}
+
+		// in day so
+		function day_so(n){
+			let dayso = document.getElementById('day_so');
+			dayso.innerHTML = " ";
+			if (n > 0){
+				for (let i = 1; i <=n; i++){
+					dayso.innerHTML += `${i} `;
+				}	
+			}
+			else if (n <= 0){
+				for (let i = n; i <= 1; i++){
+					dayso.innerHTML += `${i} `;
+				}
+			}
+			else {
+				dayso.innerHTML = "....";
+			}
+
+		}
+	</script>
+</body>
+</html>

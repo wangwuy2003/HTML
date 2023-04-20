@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		#div_tong{
+			width: 100%;
+			background: orange;
+			height: 2000px;
+		}
+		#div_tren{
+			width: 100%;
+			background: #333;
+			height: 37px;
+		}
+		#div_tren > .softbar{
+			width: 100%;
+			/*background: aqua;*/
+			height: 100%;
+			position: relative;
+		}
+		#div_tren > .softbar > .softbar-logo{
+			position: absolute;
+			right: 50px;
+			text-align: center;
+			top: 0px;
+		}
+		#div_tren > .softbar > .softbar-navi > ul{
+			list-style-type: none;
+		}
+		#div_tren > .softbar > .softbar-navi > ul > li{
+			float: left;
+			padding: 10px 20px 5px 0;
+		}
+		a{
+			text-decoration: none;
+			color: grey;
+		}
+		a:hover{
+			color: white;
+			font-size: 20px;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body style="margin: 0;">
+	<div id="div_tong">
+		<div id="div_tren">
+			<div class="softbar">
+				<div class="softbar-logo">
+					<p style="font-size: 30px; margin: 0; font-weight: bold; color: grey;">	
+						softo
+					</p>
+				</div>
+				<div class="softbar-navi">
+					<ul>
+						<li>
+							<a href="#">Video Converter</a>
+						</li>
+						<li>
+							<a href="#">MP3 Converter</a>
+						</li>
+						<li>
+							<a href="#">Add Subtitles to Vieo</a>
+						</li>
+						<li>
+							<a href="#">Compress Video</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="div_giua"></div>
+		<div id="div_duoi"></div>
+	</div>
+</body>
+</html>

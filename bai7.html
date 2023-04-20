@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+
+		/*div tong*/
+		#div_tong{
+			width: 100%;
+			/*background: orange;*/
+			height: 2000px;
+		}
+
+		/*div tren*/
+		#div_tren{
+			width: 100%;
+			background: #333;
+			height: 37px;
+		}
+		#div_tren > .softbar{
+			width: 100%;
+			/*background: aqua;*/
+			height: 100%;
+			position: relative;
+		}
+		#div_tren > .softbar > .softbar-logo{
+			position: absolute;
+			right: 50px;
+			text-align: center;
+			top: 0px;
+		}
+		#div_tren > .softbar > .softbar-navi > ul{
+			list-style-type: none;
+		}
+		#div_tren > .softbar > .softbar-navi > ul > li{
+			float: left;
+			padding: 10px 20px 5px 0;
+		}
+		#div_tren > .softbar > .softbar-navi > ul > li > a{
+			text-decoration: none;
+			color: grey;
+		}
+		#div_tren > .softbar > .softbar-navi > ul > li > a:hover{
+			color: white;
+			font-size: 20px;
+			font-weight: bold;
+		}
+
+		/*div giua*/
+		#div_giua{
+			width: 100%;
+			height: 95%;
+			/*background: brown;*/
+		}
+
+		/*header main*/
+		#header-main{
+			width: 100%;
+			height: 60px;
+			/*background: grey;*/
+			position: relative;
+			display: flex;
+		}
+		#header-main > .sign-in{
+			position: absolute;
+			right: 30px;
+			float: right;
+		}
+		#header-main > .sign-in > ul{
+			float: right;
+			list-style-type: none;
+		}
+		#header-main > .sign-in > ul > li{
+			padding: 5px 20px 0 0;
+			float: left;
+			position: relative;
+		}
+		#header-main > .sign-in > ul > li > a{
+			color: black;
+			text-decoration: none;
+		}
+		#header-main > .sign-in > ul > li > .a-sign-in{
+			color: #3291ff;
+			border: 1px solid #3291ff;
+			text-decoration: none;
+			border-radius: 5px;
+			padding: 5px 15px 7px;
+		}
+		#header-main > .sign-in > ul > li > ul{
+			display: none;
+		}
+		#header-main > .sign-in > ul > li:hover > ul{
+			display: block;
+			position: absolute;
+			top: 52px;
+		}
+		#header-main > .sign-in > ul > li > a:hover{
+			color: grey;
+			font-size: 20px;
+		}
+		#header-main > .sign-in > ul > li > .list2 > li > a{
+			text-decoration: none;
+			color: black;
+		}
+		#header-main > .sign-in > ul > li > .list2{
+			list-style-type: none;
+			padding: 0;
+		}	
+		#header-main > .sign-in > ul > li > .list2 > li{
+			width: 150px;
+			/*border: 1px solid blac*/k;
+			margin-bottom: 10px;
+		}		
+		#header-main > .clideo > a{
+			text-decoration: none;
+			position: absolute;
+			font-size: 30px;
+			color: black;
+			font-weight: bold;
+			top: 18px;
+			left: 40px;
+		}
+
+		/*main*/
+		#main{
+			width: 100%;
+			height: 800px;
+			/*background: red;*/
+		}
+		#main > .trai{
+			width: 20%;
+			height: 100%;
+/*			background: grey;*/
+			float: left;
+		}
+		#main > .giua{
+			width: 60%;
+			height: 800px;
+			/*background: aqua;*/
+			float: left;
+		}
+		#main > .giua > .video-tools-online{
+			text-align: center;
+			position: relative;
+		}
+		#main > .giua > .video-tools-online > .center{
+			margin: auto;
+			width: 60%;
+ 			padding: 10px;
+ 			margin-top: 100px;
+		}
+		#main > .giua > .title-text-center{
+			margin: auto;
+			width: 80%;
+		}
+		#main > .giua > .title-text-center > ul{
+			list-style-type: none;
+			font-size: 0;
+			padding: 0;
+			text-align: center;
+    		margin: 0 -7px -14px
+		}
+		#main > .giua > .title-text-center > ul > li{
+			padding: 0 7px 14px;
+			display: inline-block;
+			vertical-align: top;
+			font-size: 20px;
+			line-height: 30px;
+			margin: 0;
+			height: 100px;
+			width: 222px;
+		}
+		#main > .giua > .title-text-center > ul > li > .item{
+			display: block;
+			padding: 20px 20px 25px;
+			border-radius: 8px;
+			text-align: center;
+			box-shadow: 0 10px 35px 0 rgb(0 0 0 / 9%);
+		}
+		#main > .phai{
+			width: 20%;
+			height: 800px;
+/*			background: grey;*/
+			float: left;
+		}
+		.button > .all-tool{
+			background-color: #f3f3f4;
+			box-shadow: 0 0 0 0 #f3f3f4;
+			padding: 7px 21px 7px 21px;
+			border-radius: 8px;
+			font-size: 15px;
+			color: #262628
+			text-align: center;
+		}
+		.button > a:hover{
+			font-size: 20px;
+		}
+
+		hr{
+			border: 1px solid grey;
+		}
+		a{
+			text-decoration: none;
+			color: black;
+		}
+		p{
+			margin: 0;
+		}
+		.button{
+			padding-top: 60px;
+			margin: 0;
+			text-align: center;
+		}
+		#div_duoi{
+			width: 100%;
+			height: 55px;
+			background: red;
+			position: relative;
+		}
+		#copyright{
+			position: absolute;
+			left: 20px;
+			top: 17px;
+			width: 30%;
+		}
+		#div_duoi > .right{
+			position: absolute;
+			float: right;
+			right: 30px;
+			top: 15px;
+		}
+		#div_duoi > .right > ul{
+			list-style-type: none;
+			margin: 0;
+		}
+		#div_duoi > .right > ul > li{
+			float: left;
+			padding: 5px 20px 0 0;
+		}
+		#div_duoi > .right > ul > .English{
+			padding: 4px 0 4px 15px;
+    		margin: 0 0 0 15px;
+    		margin-left: 10px;
+		}
+	</style>
+</head>
+<body style="margin: 0;">
+	<div id="div_tong">
+		<div id="div_tren">
+			<div class="softbar">
+				<div class="softbar-logo">
+					<p style="font-size: 30px; margin: 0; font-weight: bold; color: grey;">	
+						softo
+					</p>
+				</div>
+				<div class="softbar-navi">
+					<ul>
+						<li>
+							<a href="#">Video Converter</a>
+						</li>
+						<li>
+							<a href="#">MP3 Converter</a>
+						</li>
+						<li>
+							<a href="#">Add Subtitles to Video</a>
+						</li>
+						<li>
+							<a href="#">Compress Video</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="div_giua">
+			<div id="header-main">
+				<div class="clideo">
+					<a href="#">clideo</a>
+				</div>
+				<div class="sign-in">
+					<ul>
+						<li>
+							<a href="#">Video Editor </a>
+						</li>
+						<li>
+							<a href="#">Tools</a>
+							<ul class="list2">
+								<li>
+									<a href="#">Merger Video</a>
+								</li>
+								<li>
+									<a href="#">Compress Video</a>
+								</li>
+								<li>
+									<a href="#">Add Subtitles</a>
+								</li>
+								<li>
+									<a href="#">Resize Video</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Pricing</a>
+						</li>
+						<li>
+							<a href="#">Resources</a>
+						</li>
+						<li>
+							<a href="" class="a-sign-in">Sign in</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<hr>
+			<div id="main">
+				<div class="trai"></div>
+				<div class="giua">
+					<div class="video-tools-online">
+						<div class="center">
+							<h1 style="font-size: 56px; margin:0; line-height: 68px;">Video tools. Online</h1>
+							<p style="font-size: 20px; line-height: 30px; letter-spacing: normal; font-weight: 300;">All-in-one easy-to-use online video tools</p>
+						</div>
+					</div>
+					<div class="title-text-center">
+						<ul>
+							<li>
+								<a href="#" class="item">
+									Video editor
+								</a>
+							</li>
+							<li>
+								<a href="#" class="item">Merge</a>
+							</li>
+							<li>
+								<a href="#" class="item">
+									Compress
+								</a>
+							</li>
+							<li>
+								<a href="#" class="item">
+									Add subtitles
+								</a>
+							</li>
+							<li>
+								<a href="#" class="item">
+									Resize
+								</a>
+							</li>
+							<li>
+								<a href="#" class="item">
+									Cut
+								</a>
+							</li>
+							<li>
+								<a href="#" class="item">
+									Meme
+								</a>
+							</li>
+							<li>
+								<a href="#" class="item">
+									Crop
+								</a>
+							</li>
+							<li>
+								<a href="#" class="item">
+									Speed
+								</a>
+							</li>
+						</ul>
+					</div>
+					<p class="button">
+						<a href="#" class="all-tool">
+							All tools 
+						</a>
+				</p>
+				</div>
+				<div class="phai"></div>
+			</div>
+		</div>
+		<div id="div_duoi">
+			<hr>
+			<div id="copyright">
+				<span class="1" style="font-size: 15px;">© 2014–2022 Softo ltd. All rights reserved.</span>
+			</div>
+			<div class="right">
+				<ul>
+					<li>
+						<a href="#">Terms of Use</a>
+					</li>
+					<li>
+						<a href="#">Privacy Policy</a>
+					</li>
+					<li>
+						<a href="#">Imprint</a>
+					</li>
+					<li>
+						<a href="#">Help</a>
+					</li>
+					<li class="English">
+						<a href="#">English</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

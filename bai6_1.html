@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		#div_tong{
+			width: 100%;
+			height: 800px;
+			/*background: red;*/
+			
+		}
+		#div_san_ho{
+			width: 15%;
+			height: 100%;
+			background: black;
+			position: relative;
+			float: left;
+		}
+		#div_soc{
+			width: 4%;
+			height: 100%;
+			background: orange;
+			float: left;
+		}
+		#div_sua{
+			width: 71%;
+			height: 100%;
+			background-image: url("C:Users/Phong/OneDrive/Hình ảnh/HTML/my_thuat/IMAGES/sua1.gif");
+			background-repeat: no-repeat;
+			background-position: center;
+			float: left;
+			position: relative;
+		}
+		#div_sua > .pictures{
+			position: absolute;
+			right: 30%;
+			top: 45px;
+		}
+		#div_sua > span{
+			position: absolute;
+			top: 20%;
+			left: 10%;
+			width: 450px;
+			font-size: 20px;
+		}
+		#div_sua > form{
+			position: absolute;
+			top: 30%;
+			left: 10%;
+			width: 40%;
+			height: 70%;
+			background-color: #A5F8A8;
+		}
+		
+		h1{
+			font-size: 70px;
+			color: orange;
+			position: absolute;
+			left: 100px;
+			text-align: left;
+		}
+		.tieude{
+			text-align: right;
+			padding: 10px 30px 10px 10px;
+		}
+		input[type=text]{
+			display: inline-block;
+			float: left;
+		}
+		input[type=number]{
+			display: inline-block;
+			float: left;
+		}
+		input[type=date]{
+			display: inline-block;
+			float: left;
+		}
+		input[type=radio]{
+			display: inline-block;
+			vertical-align: left;
+		}
+		select{
+			display: inline-block;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<div id="div_tong">
+		<div id="div_san_ho">
+			<img src="C:/Users/Phong/OneDrive/Hình ảnh/HTML/my_thuat/IMAGES/sanho.gif" style="height: 100%; width: 110%; position: absolute; z-index: 99;">
+		</div>
+		<div id="div_soc">
+			<img src="C:/Users/Phong/OneDrive/Hình ảnh/HTML/my_thuat/IMAGES/soc.jpg" style="height: 100%; width: 100%;">
+		</div>
+		<div id="div_sua">
+			<h1>THAM GIA CLB</h1>
+			<span>Quý độc giả hãy điền đầy đủ thông tin để giam gia phát triển Câu lạc bộ
+				ngày càng vững mạnh.
+			</span>
+			<form>
+				<table style="border-radius: 10px;">
+					<tr>
+						<td class="tieude">Họ và tên : </td>
+						<td>
+							<input type="text" name="" style="width: 300px;">*
+						</td>
+
+					</tr>
+					<tr>
+						<td class="tieude">Địa chỉ :</td>
+						<td>
+							<input type="text" name="" style="width: 350px">
+						</td>
+					</tr>
+					<tr>
+						<td class="tieude">Email : </td>
+						<td>
+							<input type="text" name="" style="width: 300px">*
+						</td>
+					</tr>
+					<tr>
+						<td class="tieude">Điện thoại : </td>
+						<td>
+							<input type="number" name="" style="width: 300px">*
+						</td>
+					</tr>
+					<tr>
+						<td class="tieude">Ngày sinh : </td>
+						<td style="width: 50px">
+							<input type="date" name="" style="width: 100px">/
+						</td>
+					</tr>
+					<tr>
+						<td class="tieude">Đề tài : </td>
+						<td>
+							<select style="width: 150px">
+								<option>Tìm hiểu sứa biển</option>
+							</select>
+						</td>
+					</tr>
+					<tr style="position: relative;">
+						<td class="tieude" style="text-align: right;
+						padding: 0px 30px 100px 0px">Nhóm : </td>
+						<td style="width: 100px;">
+							<input type="radio" name="nhom">Nghiên cứu
+							<br>
+							<input type="radio" name="nhom">Hải ngư
+							<br>
+							<input type="radio" name="nhom">Viễn dương
+							<br>
+							<input type="radio" name="nhom">Mỹ thuật
+							<br>
+							<input type="radio" name="nhom">Thực phẩm
+							<br>
+							<input type="radio" name="nhom">Sinh viên
+						</td>
+					</tr>
+					<tr>
+						<td class="tieude">Gởi hình : </td>
+						<td>
+							<input type="file" name="">
+						</td>
+					</tr>
+					<tr>
+						<td style="text-align: right;
+						padding: 0px 30px 80px 0px">Tài liệu : </td>
+						<td>
+							<input type="checkbox" name="">Sinh vật biển
+							<br>
+							<input type="checkbox" name="">Các loài sứa biển
+							<br>
+							<input type="checkbox" name="">San hô
+							<br>
+							<input type="checkbox" name="">Môi trường biển
+							<br>
+							<input type="checkbox" name="">Khí hậu 
+						</td>
+					</tr>
+					<tr>
+						<td width="30%"></td>
+						<td>
+							<button>Tham gia</button>
+							<button>Xóa thông tin</button>
+						</td>
+					</tr>
+				</table>
+			</form>
+			<div class="pictures">
+				<img src="C:\Users\Phong\OneDrive\Hình ảnh\HTML\my_thuat\IMAGES\nhom1b.jpg">
+				<br>
+				<img src="C:\Users\Phong\OneDrive\Hình ảnh\HTML\my_thuat\IMAGES\nhom1a.jpg">
+				<br>
+				<img src="C:\Users\Phong\OneDrive\Hình ảnh\HTML\my_thuat\IMAGES\nhom1c.jpg">
+				<br>
+				<img src="C:\Users\Phong\OneDrive\Hình ảnh\HTML\my_thuat\IMAGES\nhom1d.jpg">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

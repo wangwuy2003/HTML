@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		#div_tong {
+			width: 100%;
+			height: 750px;
+			/*background: pink;*/
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		/*div tren*/
+		#div_tren{
+			width: 100%;
+			height: 5%;
+			background: #CB9CCD;
+			border-top: 5px solid rgb(122, 101, 120);
+		}
+		/*div duoi*/
+		#div_duoi {
+			width: 94%;
+			height: 95%;
+			float: left;
+			/*background: green;*/
+			position: relative;
+		}
+		#div_duoi > .tren{
+			height: 5%;
+			/*background: purple;*/
+		}
+		#div_duoi > .tren > .img1{
+			position: absolute;
+			right: 30%;
+		}
+		#div_duoi > .tren > .img2{
+			position: absolute;
+			right: 27%;
+		}
+		#div_duoi > .tren > .img3{
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+		#div_duoi > .duoi{
+			height: 95%;
+			/*background: orange;*/
+		}
+		#div_duoi > .duoi > .mid{
+			float: left;
+			width: 70%;
+			/*background: aqua;*/
+			height: 100%;
+		}
+		#div_duoi > .duoi > .mid > .mid-left{
+			float: left;
+			width: 5%;
+			/*background: yellow;*/
+			height: 100%;
+			border-top: 5px dotted rgb(202, 156, 205);
+			border-right: 5px dotted rgb(202, 156, 205);
+		}
+		#div_duoi > .duoi > .mid > .mid-center{
+			float: left;
+			width: 8%;
+			/*background: yellow;*/
+			height: 100%;
+			border-top: 5px dotted rgb(202, 156, 205);
+		}
+		#div_duoi > .duoi > .mid > .mid-right{
+			float: left;
+			width: 80%;
+			/*background: yellow;*/
+			height: 100%;
+			/*border-top: 5px dotted rgb(202, 156, 205);*/
+		}
+		#div_duoi > .duoi > .mid > .mid-right > .img1{
+			position: absolute;
+			bottom: 0;
+			left: 60%;
+		}
+		#div_duoi > .duoi > .mid > .mid-right > .img2{
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+		#div_duoi > .duoi > .mid > .mid-center > img{
+			position: absolute;
+			bottom: 0;
+		}
+		#div_duoi > .duoi > .trai{
+			width: 30%;
+			float: left;
+			/*background: black;*/
+			height: 100%;
+		}
+		#div_duoi > .duoi > .trai > .bot{
+			/*background: grey;*/
+			height: 178px;
+			position: relative;
+			top: 20px;
+			/*left: 50px;*/
+			text-align: center;
+			width: 100%;
+			float: right;
+			background: rgb(202, 156, 205);
+		}
+		#div_duoi > .duoi > .trai > .top{
+			margin-left: 50px;
+			/*background: grey;*/
+			height: 70%;
+		}
+		#div_duoi > .duoi > .trai > .top > .paragraph{
+			height: 450px;
+			width: 100%;
+			/*text-align: left;*/
+			overflow-y: scroll;
+			float: right;
+		}
+		#div_duoi > .duoi > .trai > .top > .select{
+			position: relative;
+			text-align: center;
+			height: 30px;
+			background: rgb(202, 156, 205);
+		}
+		#div_duoi > .duoi > .trai > .top > .select > .img5{
+			position: relative;
+			top: 5px;
+		}
+
+		table{
+			height: 100%;
+			display: table;
+			border-collapse: separate;
+			box-sizing: border-box;
+			text-indent: initial;
+			border-spacing: 2px;
+			border-color: grey;
+		}
+		a{
+			text-decoration: none;
+			size: 5px;
+			font-size: 20px;
+			font-weight: bold;
+			color: black;
+
+		}
+		.right{
+			height: 95%;
+			float: left;
+			background-color: rgb(152, 155, 102);
+			border-left: 30px solid rgb(204, 204, 104);
+		}
+
+		.right > .img4{
+			float: left;
+			position: relative;
+			left: 33px;
+			height: 100%;
+		}
+	</style>
+</head>
+<body style="margin-top: 0px;">
+	<div id="div_tong">
+		<div id="div_tren">
+			<table>
+				<tr>
+					<td>
+						<a href="">| Truyền thuyết</a>
+					</td>
+					<td>
+						<a href="">| Thế giới hoa</a>
+					</td>
+					<td>
+						<a href="">| Góc hoa</a>
+					</td>
+					<td>
+						<a href="">| Thiệp hoa ...</a>
+					</td>
+					<td>
+						<a href="">| Tham gia hội hoa Tp</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="div_duoi">
+			<div class="tren">
+				<img src="C:\Users\Phong\OneDrive\Hình ảnh\HTML\hoaMoclan\buom1.gif" class="img1">
+				<img src="C:\Users\Phong\OneDrive\Hình ảnh\HTML\hoaMoclan\HoiLan.gif" class="img2">
+				<img src="C:\Users\Phong\OneDrive\Hình ảnh\HTML\hoaMoclan\mau.gif" class="img3">
+			</div>
+			<div class="duoi">
+				<div class="trai">
+					<div class="top">
+						<div class="select">
+							<div class="img5">
+								<select>
+									<option>http:www.ClbLanTp.com.vn</option>
+								</select>
+							</div>
+						</div>
+						<div class="paragraph">
+							<h1 style="color: rgb(142, 106, 142)">HOA MỘC LAN</h1>
+							<p style="font-size: 20px;">
+								Đã là hoa thì hoa nào cũng đẹp. Kể từ những đoá hoa dân dã giản dị bình thường. Hoa sim, hoa mua tím biếc sườn đồi. Hoa cà tím biếc vườn quê. Hoa lục bình tím biếc trên dòng sông. Hoa súng tím biếc ao làng. Hoa xoan tím biếc những chiều xóm vắng…. Hoa gạo đỏ đầu làng, hoa phượng đỏ trời góc phố. Hoa mào gà, hoa dong riềng đỏ góc vườn ai. Hoa cau, hoa dừa trắng phau lưng trời. Những loài hoa dân giả muôn màu muôn sắc cũng đẹp huống chi là các loài hoa quý phái.
+								<br>
+								Một trong những loài hoa quý phái là hoa lan. "Vua thưởng lan, quan thưởng trà". Cái hương lan - " cái hương thuỷ quái gì mà mê đắm lòng người đến thế". Phong lan thơm sực nức, nồng nàn, gần gũi. Địa lan thanh cao, nhẹ nhõm, lúc thắm thiết, sực nức, lúc nhạt nhoà xa xăm. Đoá bạch ngọc khi nở có màu sáng như chiếc hài của thần vệ nữ tự ngày xưa.
+								<br>
+								Hoa mai có nhiều loài. Từ ngũ đài hoa - năm cánh vàng rực rỡ đến hoàng tỉ trên 30 cánh. Hoa mai đẹp từ gốc đến cành, sống lâu bền, xếp vào hàng cổ thụ "lão mai độc thọ nhất chi vinh" (thơ cổ). Hoa mai không phô sắc hương mà khiêm tốn dịu dàng, tượng trưng cho cốt cách của người quân tử, chịu được cái giá rét của mùa đông để nở vào một sớm xuân hồng.
+								<br>
+								Hoa cúc vàng trong hàng tứ quý " tùng, cúc, trúc, mai" tượng trưng cho mặt trời, cho quyền lực. Cúc đại đoá bông to, cành cong lộng lẫy sang trọng, cúc vạn thọ giản dị, bền lâu. Hoa cúc là loại "diệp bất li chi, hoa vô lạc địa", lá cúc không bao giờ rời khỏi cành dẫu đã héo khô, hoa tàn cánh không rụng như người quân tử không xa rời lý tưởng. 
+								<br>
+								Loài hao mang biểu tượng của mùa xuân là hoa đào. Những cánh hoa đào rưng rưng khoe sắc, màu hồng phơn phớt hay hồng đậm xen trong lá non như vẻ e ấp ngại ngùng như người thiếu nữ. Hoa đào như muôn cánh bướm hồng rung rinh trong gió, khoe sắc trong nắng xuân. 
+								<br>
+								Hoa mơ, hoa mận trắng dung dị mộc mạc, làm sang, làm đẹp đồi nương, làm đẹp núi rừng.
+								<br>
+								Hoa ban có nhụy màu vàng nhạt xung quanh điểm sắc hồng giữa năm cánh xoè nở trong nắng, mịn màng như tuyết nhẹ nhàng lan toả hương thơm.
+								<br>
+								Hồng nhung đỏ thắm, hồng bạch trắng tinh. Hoa nhài như tuyết, hương thoảng nồng nàn bền bỉ chân quê.
+								<br>
+								Hoa thược dược đỏ, vàng, trắng, tím đủ màu sắc. Hải đường hoa lựu đỏ rực. Hoa sen hồng ngan ngát đưa hương. Hoa đơn dân dã. Hoa sữa ngạt ngào khắp ngõ phố khuya.
+								<br>
+								Hoa lúa, hoa ngô… không thơm ngào ngạt quý phái, nhưng thân thiết hương đồng gió nội, nuôi lớn đời ta, nuôi lớn hồn ta.
+								<br>
+								Hoa. Cái màu trắng của hoa là màu trắng trong, tinh khiết. Màu hồng là tỏ tình êm ái. Màu vàng là kính trọng. Màu đỏ là thắng lợi. Màu xanh hy vọng. Màu tím thuỷ chung. Hoa là nhịp cầu tri ân nối con người với vũ trụ, là thông điệp giữa thế giới trần gian với bao la trời đất. Hoa. Đâu chỉ là hoa? Đó còn là "chùm thương nhớ, nụ yêu thương "(3) Hoa là biểu tượng của cái đẹp, biểu tượng của tình yêu, tình đất, tình người.
+								<br>
+								Trên đời này, ta không thể sống thiếu hoa. Hế nhưng có một thứ trên tất cả các loài hoa, có một thứ là chúa tể các loài hoa, là"nữ hoàng của các loài hoa " _không phải là hoa _ chỉ mới là nụ thôi _ nhưng đẹp hơn, tươi hơn, quý hơn, ngát hương thơm hơn gấp mhiều lần bất cứ một loài hoa nào trên trái đất _ ấy là NỤ… CƯỜI!
+								Ay là NỤ CƯỜI của con người, NỤ CƯỜI trên gươing mặt của mẹ cha ta, vợ con ta, anh em bè bạn ta, đồng chí đồng đội ta!
+								<br>
+								"Trăm hoa đổi một nụ cười"
+								<br>
+								Ta xin một đời hết lòng chăm chỉ trồng thật nhiều hoa, nâng niu hoa để đổi lấy những nụ cười thân thương ấy.
+								<br>
+								1. Phạm Đình Hổ - "Vũ Trung - tuỳ bút"
+								2. Thơ Chế Lan Viên 
+								3. Thơ Xuân Diệu
+								4. Tục ngữ Việt Nam
+							</p>
+						</div>
+					</div>
+					<div class="bot">
+						<img src="C:\Users\Phong\OneDrive\Hình ảnh\HTML\hoaMoclan\la1.jpg">
+						<img src="C:\Users\Phong\OneDrive\Hình ảnh\HTML\hoaMoclan\la2.jpg">
+						<img src="C:\Users\Phong\OneDrive\Hình ảnh\HTML\hoaMoclan\la3.jpg">
+					</div>
+				</div>
+				<div class="mid">
+					<div class="mid-left"></div>
+					<div class="mid-center">
+						<img src="C:\Users\Phong\OneDrive\Hình ảnh\HTML\hoaMoclan\truyenthuyet.gif">
+					</div>
+					<div class="mid-right">
+						<img class="img1" src="C:\Users\Phong\OneDrive\Hình ảnh\HTML\hoaMoclan\hoa.jpg">
+						<img class="img2" src="C:\Users\Phong\OneDrive\Hình ảnh\HTML\hoaMoclan\buom4.gif">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="right">
+			<img class="img4" src="C:\Users\Phong\OneDrive\Hình ảnh\HTML\hoaMoclan\lephai.jpg">
+		</div>
+	</div>
+</body>
+</html>
